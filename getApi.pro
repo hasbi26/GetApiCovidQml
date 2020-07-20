@@ -1,6 +1,8 @@
 QT += quick
+QT += sql
 
 CONFIG += c++11
+
 
 # The following define makes your compiler emit warnings if you use
 # any Qt feature that has been marked deprecated (the exact warnings
@@ -15,7 +17,8 @@ DEFINES += QT_DEPRECATED_WARNINGS
 
 SOURCES += \
         getqml.cpp \
-        main.cpp
+        main.cpp \
+        sql.cpp
 
 RESOURCES += qml.qrc
 
@@ -31,5 +34,6 @@ else: unix:!android: target.path = /opt/$${TARGET}/bin
 !isEmpty(target.path): INSTALLS += target
 
 HEADERS += \ \
-    getqml.h
+    getqml.h \
+    sql.h
 
